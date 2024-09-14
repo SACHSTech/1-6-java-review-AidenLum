@@ -17,7 +17,7 @@ public class Review2{
         System.out.print("Choose a menu option: ");
         int selectJoke = Integer.parseInt(keyboard.readLine());
         
-        // Output joke depending on message selected. (Also Ive never used this before and had to look up how to do switch case)
+        // Output joke depending on message selected.
         switch (selectJoke) {
         case 0:
             System.out.println("What do you call a stew with hair in it?\nHairy Pot-ter");
