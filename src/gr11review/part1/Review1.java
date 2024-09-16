@@ -12,32 +12,32 @@ public class Review1{
 
         // Prompt user to input month and day number
         System.out.print("Enter the month number: ");
-        int month = Integer.parseInt(keyboard.readLine());
+        int intMonth = Integer.parseInt(keyboard.readLine());
 
         System.out.print("Enter the day number: ");
-        int days = Integer.parseInt(keyboard.readLine());
+        int intDays = Integer.parseInt(keyboard.readLine());
 
         // Proccess the how many days are in each month and calculate the day of the year number
 
         int daysOfMonths = 0; // Create variable to hold the days of months prior
 
         // Proccess / Calculate the number of days prior to the month selected using while loop
-        month -= 1;
+        intMonth -= 1;
 
-        while (month > 0){
-            if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+        while (intMonth > 0){
+            if (intMonth == 1 || intMonth == 3 || intMonth == 5 || intMonth == 7 || intMonth == 8 || intMonth == 10 || intMonth == 12){
                 daysOfMonths += 31;
             }
-            else if(month == 4 || month == 6 || month == 9 || month == 11){
+            else if(intMonth == 4 || intMonth == 6 || intMonth == 9 || intMonth == 11){
                 daysOfMonths += 30;
             }
             else {
                 daysOfMonths += 28;
             }
-            month -= 1;
+            intMonth -= 1;
         }
         
         // Output total number of days by adding days prior to the month and days inputted.
-        System.out.println(daysOfMonths + days);
+        System.out.println(daysOfMonths + intDays);
     }
 }

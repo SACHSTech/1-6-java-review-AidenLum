@@ -7,14 +7,14 @@ public class Review3{
 
         // Loop to print odd numbers from 20 to 100
         for(int i = 21; i <= 100; i += 2){
-            System.out.print(i + " ");
+            System.out.println(i);
         }
 
-        System.out.print("\n\n"); // Seperate loops with blank line
+        System.out.println(); // Seperate loops with blank line
 
         // Loop to print numbers 29 to 2 in decreasing order
         for(int i = 29; i >= 2; i--){
-            System.out.print(i + " ");
+            System.out.println(i);
         }
 
     }
