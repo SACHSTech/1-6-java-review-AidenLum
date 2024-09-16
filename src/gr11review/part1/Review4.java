@@ -2,19 +2,19 @@ package gr11review.part1;
 
 // This program prompts user to enter in how many items to purchase then calculates subtotal, tax, and total.
 
-import java.text.DecimalFormat; // Import scanner class
-import java.util.Scanner; // Import decimal format class
+import java.io.*; // Import scanner class
+import java.text.DecimalFormat; // Import native java
 
 public class Review4{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
 
-        Scanner in = new Scanner(System.in); // Create scanner object
-        DecimalFormat formatter = new DecimalFormat("#.##"); // Create decimal format object
+        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in)); // Create buffered reader object
+        DecimalFormat formatter = new DecimalFormat("0.00"); // Create decimal format object
         
 
         // Prompt user to enter in number of items to purchase
         System.out.print("How many items do you want to buy? ");
-        int items = in.nextInt();
+        int items = Integer.parseInt(keyboard.readLine());
 
         double[] cost = new double[items]; // Array variable to hold each cost value
         double subtotal = 0; // Variable for subtotal
@@ -22,7 +22,7 @@ public class Review4{
         // Prompt user for the cost of each item and store cost into an array space while calculating subtotal
         for (int i = 1; i <= items; i++){
             System.out.print("Enter the price for item " + i + ": ");
-            cost[i-1] = in.nextDouble();
+            cost[i-1] = Double.parseDouble(keyboard.readLine());
             subtotal += cost[i-1];
         }
 
@@ -32,7 +32,5 @@ public class Review4{
         System.out.println("Subtotal: $" + formatter.format(subtotal));
         System.out.println("Tax: $" + formatter.format(tax));
         System.out.println("Total: $" + formatter.format(subtotal + tax));
-
-        in.close(); // Close scanner object
     }
 }
