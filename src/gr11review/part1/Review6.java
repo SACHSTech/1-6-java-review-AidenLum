@@ -8,7 +8,7 @@ public class Review6{
     public static void main(String[] args) throws IOException {
         
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
-        DecimalFormat formatter = new DecimalFormat("#.##"); // Create decimal format object
+        DecimalFormat formatter = new DecimalFormat("0.00"); // Create decimal format object
 
         double dblPrice;
         double dblSubtotal = 0;
@@ -20,10 +20,11 @@ public class Review6{
 
         } while (dblPrice > 0);
 
-        double dblTax;
-        System.out.println("Subtotal: ");
-        System.out.println("Tax: ");
-        System.out.println("Total: ");
+        double dblTax = dblSubtotal * 0.13;
+
+        System.out.println("Subtotal: $" + formatter.format(dblSubtotal));
+        System.out.println("Tax: $" + formatter.format(dblTax));
+        System.out.println("Total: $" + formatter.format(dblSubtotal + dblTax));
         
 
 
