@@ -1,5 +1,8 @@
 package gr11review.part1;
 
+/* This program will create different statistics based off of the sentence including character length,
+number of a, number of spaces, and number of odd characters. */
+
 import java.io.*; // import native java
 
 public class Review7{

@@ -1,5 +1,7 @@
 package gr11review.part1;
 
+// This program will alllow the user to enter in the price of items until they enter 0, and will calculate the subtotal, tax, and total.
+
 import java.io.*; // Import nativa java
 import java.text.DecimalFormat; // import decimal format
 
