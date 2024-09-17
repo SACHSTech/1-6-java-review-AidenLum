@@ -19,25 +19,25 @@ public class Review1{
 
         // Proccess the how many days are in each month and calculate the day of the year number
 
-        int daysOfMonths = 0; // Create variable to hold the days of months prior
+        int intDaysOfMonths = 0; // Create variable to hold the days of months prior
 
         // Proccess / Calculate the number of days prior to the month selected using while loop
         intMonth -= 1;
 
         while (intMonth > 0){
             if (intMonth == 1 || intMonth == 3 || intMonth == 5 || intMonth == 7 || intMonth == 8 || intMonth == 10 || intMonth == 12){
-                daysOfMonths += 31;
+                intDaysOfMonths += 31;
             }
             else if(intMonth == 4 || intMonth == 6 || intMonth == 9 || intMonth == 11){
-                daysOfMonths += 30;
+                intDaysOfMonths += 30;
             }
             else {
-                daysOfMonths += 28;
+                intDaysOfMonths += 28;
             }
             intMonth -= 1;
         }
         
         // Output total number of days by adding days prior to the month and days inputted.
-        System.out.println(daysOfMonths + intDays);
+        System.out.println(intDaysOfMonths + intDays);
     }
 }

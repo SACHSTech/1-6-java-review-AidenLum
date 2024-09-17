@@ -13,12 +13,17 @@ public class Review2{
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
         // Display menu and prompt user to select a menu option.
-        System.out.println("0 - print a joke about your hair\n1 - print a joke about your feet\n2 - print a joke about your clothes\n3 - print a joke about your teacher");
+        
+        System.out.println("0 - print a joke about your hair");
+        System.out.println("1 - print a joke about your feet");
+        System.out.println("2 - print a joke about your clothes");
+        System.out.println("3 - print a joke about your teacher");
+
         System.out.print("Choose a menu option: ");
-        int selectJoke = Integer.parseInt(keyboard.readLine());
+        int intSelectJoke = Integer.parseInt(keyboard.readLine());
         
         // Output joke depending on message selected.
-        switch (selectJoke) {
+        switch (intSelectJoke) {
         case 0:
             System.out.println("What do you call a stew with hair in it?\nHairy Pot-ter");
             break;
@@ -32,7 +37,7 @@ public class Review2{
             System.out.println("What do you call a teacher who is stuck in traffic?\nLate");
             break;
         default:
-            System.out.print("Invalid menu option");
+            System.out.println("Invalid menu option");
         }
     }
 }

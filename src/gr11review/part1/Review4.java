@@ -17,20 +17,20 @@ public class Review4{
         int items = Integer.parseInt(keyboard.readLine());
 
         double[] cost = new double[items]; // Array variable to hold each cost value
-        double subtotal = 0; // Variable for subtotal
+        double dblSubtotal = 0; // Variable for subtotal
 
         // Prompt user for the cost of each item and store cost into an array space while calculating subtotal
         for (int i = 1; i <= items; i++){
             System.out.print("Enter the price for item " + i + ": ");
             cost[i-1] = Double.parseDouble(keyboard.readLine());
-            subtotal += cost[i-1];
+            dblSubtotal += cost[i-1];
         }
 
-        double tax = subtotal * 0.13; // Calculate tax
+        double dblTax = dblSubtotal * 0.13; // Calculate tax
 
         // Output subtotal, tax, and total.
-        System.out.println("Subtotal: $" + formatter.format(subtotal));
-        System.out.println("Tax: $" + formatter.format(tax));
-        System.out.println("Total: $" + formatter.format(subtotal + tax));
+        System.out.println("Subtotal: $" + formatter.format(dblSubtotal));
+        System.out.println("Tax: $" + formatter.format(dblTax));
+        System.out.println("Total: $" + formatter.format(dblSubtotal + dblTax));
     }
 }

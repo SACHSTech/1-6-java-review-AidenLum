@@ -18,9 +18,9 @@ public class Review6{
             dblPrice = Double.parseDouble(keyboard.readLine());
             dblSubtotal += dblPrice;
 
-        } while (dblprice > 0);
+        } while (dblPrice > 0);
 
-        dbl
+        double dblTax;
         System.out.println("Subtotal: ");
         System.out.println("Tax: ");
         System.out.println("Total: ");
